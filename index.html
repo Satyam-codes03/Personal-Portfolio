@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyam's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Satyamnew.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer/Designer</p>
+                <h1>Hi, I'm <span>Satyam</span><br>Pandey & I'm a <br><span>Full Stack Developer</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- ------------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="images/user.png" alt="satyam's pic"></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am BTech Computer Science student with a strong foundation in programming & web technologies, Experienced in building responsive web applications using HTML CSS JavaScript and familiar with frameworks like React and Nodejs Passionate about machine learning Eager to apply academic knowledge to real world problems.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                             <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Cybersecurity</span><br>Protection of Digital Assets</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jun 2024 - Oct 2024</span><br>Head of Web & Graphic Designing team at Aith Incubation & Startup Center</li>
+                             <li><span>Jul 2023 - Jun 2024</span><br>Web & Graphic Designer at Aith Incubation & Startup Center </li>
+                            <li><span>Sep 2023 - Aug 2024</span><br>DSA Coordinator at Google Developer Student Club dr.AITH</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>B.Tech in Computer Science & Engineering (AKTU)</li>
+                             <li><span>2021</span><br>Intermediate (PCM,94.2%,CBSE)</li>
+                            <li><span>2019</span><br>High School (93.6%,CBSE) </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------services--------------- -->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quia deserunt, error quidem voluptas, delectus iure repellendus quas neque voluptatem itaque adipisci natus.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quia deserunt, error quidem voluptas, delectus iure repellendus quas neque voluptatem itaque adipisci natus.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quia deserunt, error quidem voluptas, delectus iure repellendus quas neque voluptatem itaque adipisci natus.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+
+        </div>
+     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
