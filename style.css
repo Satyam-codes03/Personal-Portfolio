@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image:url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 240px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    /* it will remove the underline  */
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgba(38, 38, 228, 0.83);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: rgba(38, 38, 228, 0.83);
+}
+/* ------------about---------------- */
+#about{
+    padding: 80px 0;
+    /* padding from top bottom & left-Right  */
+    color: grey;
+    /* different color for the text  */
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+    /* means width of the column will be 35% */
+
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    /* in the first column we have added width of 35% and in the second column we have added the width of 60%. so, the 5% remaining width will be in between 1st and 2nd column*/
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    /* top left&right bottom margin  */
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    /* content empty */
+    width: 0;
+    height: 3px;
+    background: rgba(38, 38, 228, 0.83);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: blue;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+    /* it will hide all the tab contents  */
+}
+.tab-contents.active-tab{
+    display: block;
+    /* due to this skills section will be displayed and experience and Education Section is still hidden */
+
+    /* now we have to add click feature so that when we click on education it should show education and when we click on skills it should show skills for that we will write it in html by onclick event and opentab function  */
+}
+
+/* ------------services-------------- */
+
+#sevices{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
